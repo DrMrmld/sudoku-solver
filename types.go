@@ -123,24 +123,26 @@ func (s Sudoku) Print() {
 	botSep := "'"
 	hor := "---"
 
-	fmt.Print(topSep)
+	print(topSep)
 	for range s {
-		fmt.Print(hor)
-		fmt.Print(topSep)
+		print(hor)
+		print(topSep)
 	}
-	fmt.Print("\n")
+	print("\n")
 	for i := range s {
-		fmt.Print(midSep)
+		print(midSep)
 		for j := range s[i] {
-			fmt.Print(" ")
+			print(" ")
 			if val := s[i][j]; val == 0 {
-				fmt.Print(" ")
+				print(" ")
 			} else {
-				fmt.Print(val)
+				print(colors[i][j])
+				print(val)
+				print(reset)
 			}
-			fmt.Print(" " + midSep)
+			print(" " + midSep)
 		}
-		fmt.Print("\n")
+		print("\n")
 
 		sep := ""
 		if i == len(s) - 1 {
@@ -149,11 +151,11 @@ func (s Sudoku) Print() {
 			sep = midSep
 		}
 
-		fmt.Print(sep)
+		print(sep)
 		for range s[i] {
-			fmt.Print(hor)
-			fmt.Print(sep)
+			print(hor)
+			print(sep)
 		}
-		fmt.Print("\n")
+		print("\n")
 	}
 }

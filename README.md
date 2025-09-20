@@ -5,7 +5,7 @@ This tiny program is a solution for the [sudoku problem](https://github.com/01-e
 To test the program, run it with a set of valid rows (9) of the sudoku as the arguments:
 
 ```
-$ go run . "34.91..2." ".96.8..41" "..8.2..7." ".6..57.39" "1.2.6.7.." "97..3..64" "45.2.8..6" ".8..9..5." "6.3..189."
+❯ go run . "34.91..2." ".96.8..41" "..8.2..7." ".6..57.39" "1.2.6.7.." "97..3..64" "45.2.8..6" ".8..9..5." "6.3..189."
 ```
 
 If the input is valid, the program will print the solution for the sudoku.

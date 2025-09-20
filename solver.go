@@ -1,7 +1,6 @@
 package main
 
 func (s Sudoku) Solve() Sudoku {
-	initial := s
 	result := EmptySudoku()
 
 	var addOne func(Sudoku)
@@ -30,7 +29,7 @@ func (s Sudoku) Solve() Sudoku {
 		}
 	}
 
-	addOne(initial)
+	addOne(s)
 
 	return result
 }

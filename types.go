@@ -34,7 +34,7 @@ func NewSudoku(rows []string) (Sudoku, error) {
 	return sudoku, nil
 }
 
-func (s *Sudoku) IsValid() bool {
+func (s Sudoku) IsValid() bool {
 	for _, row := range s {
 		var seen [9]bool
 
@@ -117,7 +117,7 @@ func (s *Sudoku) IsValid() bool {
 	return true
 }
 
-func (s *Sudoku) Print() {
+func (s Sudoku) Print() {
 	topSep := "."
 	midSep := "|"
 	botSep := "'"

@@ -13,6 +13,5 @@ func main() {
 		return
 	}
 
-	sudoku.Print()
-	fmt.Println(sudoku.IsValid())
+	sudoku.Solve().Print()
 }

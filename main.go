@@ -9,7 +9,12 @@ func main() {
 	rows := os.Args[1:]
 	sudoku, err := NewSudoku(rows)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Printf("Failed to create a sudoku: %s\n", err)
+		return
+	}
+
+	if !sudoku.IsValid() {
+		fmt.Println("Entered sudoku is not valid.")
 		return
 	}
 
